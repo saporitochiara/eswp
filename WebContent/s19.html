@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide 19</title>
+</head>
+<body>
+    <h1>form</h1>
+
+    <p>
+        Back to <a href="./index.html">home</a>
+    </p>
+
+    <!-- TBD: action not implemented -->
+    <form action="/comment" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="sender">
+        </div>
+        <div>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="message"></textarea>
+        </div>
+        <div>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</body>
+</html>
