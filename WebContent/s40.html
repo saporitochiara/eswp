@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide 40</title>
+</head>
+<body>
+    <h1>String /2</h1>
+
+    <p>
+        Back to <a href="./index.html">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let s = 'Tom,Bob,Sally';
+        target.value += s + '\n';
+
+        target.value += 'length: ' + s.length + '\n';
+
+        target.value += 'first: ' + s[0] + '\n';
+        target.value += 'last: ' + s[s.length - 1] + '\n';
+
+        let idx = s.indexOf('Bob');
+        target.value += 'Bob: ' + idx + '\n';
+        target.value += 'Bill: ' + s.indexOf('Bill') + '\n';
+
+        let end = s.indexOf(',', idx);
+        target.value += 'slice (' + idx + '..' + end + ']: ' + s.slice(idx, end) + '\n';
+
+        target.value += 'lower: ' + s.toLowerCase() + '\n';
+        target.value += 'upper: ' + s.toUpperCase() + '\n';
+        
+        target.value += 'Bill instead of Bob: ' + s.replace('Bob', 'Bill') + '\n';
+
+        let array = s.split(',');
+        target.value += 'First in array: ' + array[0];
+    </script>
+</body>
+</html>

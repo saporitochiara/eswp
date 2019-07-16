@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide 38</title>
+</head>
+<body>
+    <h1>Operators /3</h1>
+
+    <p>
+        Back to <a href="./index.html">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let value = 2;
+        let check = value === 2;
+        target.value += check + '\n';
+
+        check = value !== 3;
+        target.value += check + '\n';
+
+        check = value < 2;
+        target.value += check + '\n';
+
+        check = value <= 2;
+        target.value += check + '\n';
+
+        check = value > 2;
+        target.value += check + '\n';
+
+        check = value >= 2;
+        target.value += check + '\n';
+
+        check = value == '2';
+        target.value += check + '\n';
+
+        check = value != '2';
+        target.value += check + '\n';
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide 36</title>
+</head>
+<body>
+    <h1>Operators /1</h1>
+
+    <p>
+        Back to <a href="./index.html">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let value = 2 + 3;
+        target.value += value + '\n';
+
+        value = 2 - 3;
+        target.value += value + '\n';
+
+        value = 2 * 3;
+        target.value += value + '\n';
+
+        value = 2 / 3;
+        target.value += value + '\n';
+
+        value = 2 % 3;
+        target.value += value + '\n';
+
+        value = 2 ** 3;
+        target.value += value + '\n';
+
+        // obsolete
+        value = Math.pow(2, 3);
+        target.value += value + '\n';
+
+        target.value += 'pre-increase: ' + ++value + '\n';
+        target.value += 'pre-decrease: ' + --value + '\n';
+        target.value += 'post-increase: ' + value++ + ', ';
+        target.value += value + '\n';
+        target.value += 'post-decrease: ' + value-- + ', ';
+        target.value += value + '\n';
+
+        console.log("bye");
+    </script>
+</body>
+</html>
