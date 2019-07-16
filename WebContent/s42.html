@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide 42</title>
+</head>
+<body>
+    <h1>Conditions</h1>
+
+    <p>
+        Back to <a href="./index.html">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        let target = document.getElementById('target');
+
+        let flag = true;
+        if(flag) {
+            target.value += flag + '\n';
+        }
+        
+        let x;
+        if(x) {
+            target.value += '?!\n';
+        } else {
+            // undefined
+            target.value += 'x is ' + x + '\n';
+        }
+        
+        x = null;
+        if(x) {
+            target.value += '?!\n';
+        } else {
+            // null
+            target.value += 'x is ' + x + '\n';
+        }
+        
+        x = 0;
+        if(x) {
+            target.value += '?!\n';
+        } else {
+            // zero
+            target.value += 'x is ' + x + '\n';
+        }
+
+        x = Number('Mistake');
+        if(x) {
+            target.value += '?!\n';
+        } else {
+            // NaN
+            target.value += 'x is ' + x + '\n';
+        }
+
+        x = '';
+        if(x) {
+            target.value += '?!\n';
+        } else {
+            // empty string
+            target.value += 'x is an empty string ->' + x + '<-\n';
+        }
+
+
+        x = 'false';
+        if(x) {
+            target.value += 'the string "' + x + '" is true\n';
+        } else {
+            target.value += '?!\n';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide 44</title>
+</head>
+<body>
+    <h1>Functions</h1>
+
+    <p>
+        Back to <a href="./index.html">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+
+    <script type="text/javascript">
+        function f() {
+            console.log('f()');
+        }
+
+        f();
+        
+        let x = function() {
+            console.log('anonymous function');
+        }
+        
+        x();
+        
+        function g(a, b) {
+            return a + b;
+        }
+
+        let target = document.getElementById('target');
+
+        target.value += g(2, 3) + '\n';
+        target.value += g('Hello', 'World') + '\n';
+     </script>
+</body>
+</html>
