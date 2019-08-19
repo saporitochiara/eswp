@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide 45</title>
+</head>
+<body>
+    <h1>Asynchronous JavaScript And XML</h1>
+    <p>
+        Back to <a href="./index.html">home</a>
+    </p>
+
+    <textarea id="target" rows="20" cols="80"></textarea>
+    <div>
+        <button onclick="getText();">Get text</button>
+        <button onclick="getTextDetailed();">Get text w/ details</button>
+    </div>
+
+    <script type="text/javascript">
+        function callback() {
+            let target = document.getElementById('target');
+
+        	try {
+                switch (this.readyState) {
+                case XMLHttpRequest.OPENED:
+                    target.value += "[Server connection established]\n";
+                    return;
+                case XMLHttpRequest.HEADERS_RECEIVED:
+                    target.value += "[Request received]\n";
+                    return;
+                case XMLHttpRequest.LOADING:
+                    target.value += "[Processing request]\n";
+                    return;
+                case XMLHttpRequest.DONE:
+                    target.value += "[Response is ready]\n";
+                    break;
+                default:
+                    // UNSENT
+                    target.value += "[Request not initialized or error " + this.readyState + "]\n";
+                    return;
+                }
+            } catch (e) {
+                target.value += "[Exception: " + e + "]\n";
+	            return;
+            }
+
+            if (this.status != 200) {
+                target.value += "[Something went wrong: " + this.status + "]\n";
+                return;
+            }
+
+            target.value += this.responseText;
+        }
+
+        function getTextDetailed() {
+            let request = new XMLHttpRequest();
+            request.onreadystatechange = callback;
+            request.open("GET", "/eswp/s45.txt");
+            request.send();
+        }
+
+        function getText() {
+            let request = new XMLHttpRequest();
+            request.onload = callback;
+            request.open("GET", "/eswp/s45.txt");
+            request.send();
+        }
+    </script>
+</body>
+</html>
