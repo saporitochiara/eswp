@@ -4,5 +4,6 @@
  * Slide 48
  */
 $(function() {
-    $('<div>Hello</div>').css({color: 'red'}).appendTo('body');
+    let score = 42;
+    $('textarea').append('Your score is ' + score + '\n');
 });

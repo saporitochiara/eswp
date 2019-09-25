@@ -4,51 +4,42 @@
  * Slide 51
  */
 $(function() {
-    let important = false;
+	$('#colorOn').click(function() {
+		$('#msg1').addClass('red');
+	});
 
-    $('#changeMsg1').click(function() {
-        let msg = $('#msg1');
-        $('#target').html(msg.html());
-        if (important) {
-            msg.html('An <b>important</b> message');
-        } else {
-            msg.html('A <i>plain</i> message');
-        }
-        important = !important;
-    });
+	$('#colorOff').click(function() {
+		$('#msg1').removeClass('red');
+	});
 
-    $('#changeTextMsg1').click(function() {
-        let msg = $('#msg1');
-        $('#target').text(msg.text());
-        if (important) {
-            msg.text('An <b>important</b> message');
-        } else {
-            msg.text('A <i>plain</i> message');
-        }
-        important = !important;
-    });
+	$('#swapColor').click(function() {
+		$('#msg2').toggleClass('red');
+	});
 
-    $('#changeMsg2').click(function() {
-        let msg = $('#msg2');
-        $('#target').text(msg.val());
-        if (important) {
-            msg.val('Important');
-        } else {
-            msg.val('Plain');
-        }
-        important = !important;
-    });
+	$('#makeItRed').click(function() {
+		let cur = $('#msg3');
 
-    $('#upsize').click(function() {
-        let msg = $('#msg3');
-        let cur = parseInt(msg.css('font-size'));
-        msg.css('font-size', cur * 2);
-    });
+		cur.removeClass('yellow');
+		cur.addClass('red');
+	});
 
-    $('#downsize').click(function() {
-        let msg = $('#msg3');
-        let cur = parseInt(msg.css('font-size'));
-        msg.css('font-size', cur > 1 ? cur / 2 : 1);
-    });
+	$('#makeItYellow').click(function() {
+		let cur = $('#msg3');
 
+		cur.removeClass('red');
+		cur.addClass('yellow');
+	});
+
+	$('#swap3').click(function() {
+		let cur = $('#msg3');
+
+		if (cur.hasClass('red')) {
+			cur.removeClass('red');
+			cur.addClass('yellow');
+		} else if (cur.hasClass('yellow')) {
+			cur.removeClass('yellow');
+		} else {
+			cur.addClass('red');
+		}
+	});
 });

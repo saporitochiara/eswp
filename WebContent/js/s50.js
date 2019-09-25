@@ -4,15 +4,14 @@
  * Slide 50
  */
 $(function() {
-    $('#colorOn').click(function() {
-        $('#msg1').addClass('red');
+    let target = $('#target');
+    
+    $('a').click(function(event) {
+        alert('You should not use any link on this page!');
+        event.preventDefault();
     });
 
-    $('#colorOff').click(function() {
-        $('#msg1').removeClass('red');
-    });
-
-    $('#swapColor').click(function() {
-        $('#msg2').toggleClass('red');
+    $('html').dblclick(function(event) {
+        target.append('Double-click detected at ' + event.pageX + ', ' + event.pageY + '\n');
     });
 });
