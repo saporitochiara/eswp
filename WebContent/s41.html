@@ -16,14 +16,14 @@
     <script type="text/javascript">
         let target = document.getElementById('target');
 
-        let data = [1, 'hello', [true, 42.24]];
+        let data = [ 1, 'hello', [ true, 42.24 ] ];
         target.value += data + '\n';
         console.log(data.length);
 
         console.log(data[1], data[2][1]);
         data[2] = false;
 
-        for(let i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
             console.log(data[i]);
         }
 
@@ -32,9 +32,13 @@
         target.value += 'pop: ' + data.pop() + '\n';
         target.value += 'shift: ' + data.shift() + '\n';
         target.value += 'current status: ' + data + '\n';
-        data.push('push');
+        data.push('push1');
+        data.push('push2');
         data.unshift('unshift');
-        target.value += 'final status: ' + data + '\n';
+        target.value += 'new status: ' + data + '\n';
+
+        data.splice(1, 2);
+        target.value += 'new status: ' + data + '\n';
     </script>
 </body>
 </html>
