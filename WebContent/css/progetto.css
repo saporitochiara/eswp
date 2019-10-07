@@ -1,0 +1,24 @@
+p, h1, h2, h3, a, form {
+/*	font-family: century gothic;*/
+}
+
+h2 {
+	font-style: italic;
+}
+
+p.boldCls {
+	font-style: "bold";
+}
+
+.upperCls {
+	text-transform: uppercase;
+}
+
+#blockId {
+	border: 3px solid #000000;
+}
+
+.bodyBack {
+	background-image:
+		url("https://st.depositphotos.com/3008028/3751/i/950/depositphotos_37516417-stock-photo-black-and-white-background.jpg");
+}
